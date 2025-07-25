@@ -4,7 +4,7 @@ import HomePage from "../pages/HomePage.vue";
 import MenuPage from "../pages/MenuPage.vue";
 import AboutPage from "../pages/AboutPage.vue";
 import NewsPage from "../pages/NewsPage.vue";
-import OderPage from "../pages/Oderpage.vue";
+import OderPage from "../pages/OderPage.vue"
 import SignupPage from "../pages/SignupPage.vue";
 import SigninPage from "../pages/SigninPage.vue";
 import MenuDetail from "../pages/MenuDetail.vue";
