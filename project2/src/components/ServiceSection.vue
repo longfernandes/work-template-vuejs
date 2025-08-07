@@ -4,39 +4,39 @@
             5 BƯỚC ĐỂ ĐẶT TIỆC
         </h2>
         <div
-            class="flex flex-nowrap justify-center gap-y-10 max-w-[1800px] gap-x-4 mx-auto"
+            class="flex flex-wrap lg:flex-nowrap justify-center gap-y-10 max-w-[1800px] gap-x-4 mx-auto"
         >
             <div
                 v-for="(step, index) in steps"
                 :key="index"
-                class="w-full flex flex-col items-center space-y-5"
+                class="w-full sm:w-[45%] lg:w-full flex flex-col items-center space-y-5"
             >
-                <!-- Step Circle and Number -->
                 <div class="relative">
                     <div
-                        class="w-40 h-40 rounded-full bg-gray-100 flex items-center justify-center"
+                        class="w-28 h-28 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full bg-gray-100 flex items-center justify-center"
                     >
                         <component
                             :is="step.icon"
-                            class="text-4xl text-black"
+                            class="text-3xl sm:text-4xl text-black"
                         />
                     </div>
                     <div
-                        class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-orange-600 text-white rounded-full w-15 h-15 flex items-center justify-center text-lg font-bold shadow-md"
+                        class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-orange-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-base font-bold shadow-md"
                     >
                         {{ step.number }}
                     </div>
                 </div>
 
-                <!-- Step Title and Description -->
-                <div>
-                    <h3 class="font-bold text-lg uppercase text-gray-900">
+                <div class="text-center px-2">
+                    <h3
+                        class="font-bold text-base sm:text-lg uppercase text-gray-900"
+                    >
                         {{ step.title }}
                     </h3>
-                    <p class="text-lg text-gray-700 mt-1">{{ step.desc }}</p>
+                    <p class="text-sm sm:text-base text-gray-700 mt-1">
+                        {{ step.desc }}
+                    </p>
                 </div>
-
-                <!-- Dot Separator (except last item) -->
                 <DotSeparator v-if="index < steps.length - 1" />
             </div>
         </div>

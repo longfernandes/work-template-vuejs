@@ -137,7 +137,7 @@ export default {
                     date: "Thứ Năm, 24/07/2025",
                     description:
                         "Mở tiệc ăn mừng cùng chương trình Flash Sale siêu hấp dẫn: Chỉ từ 99.000 VNĐ trên ứng dụng Nhà Hàng",
-                    image: "https://lh6.googleusercontent.com/4E0mVmq6foFW50i9FJMU-5h2Gv6vwt96MH9b_N8XMS9YifihkQ1syieTL9Am61FdohT9btBkX4N7dsYlQ8q10F9GsWQ8ERjE9nXMSWzkYr4nOUvF2tviHVN4KRffWS9Q3H5lKtyByKWW94qQPSMA8Ic",
+                    image: "https://media.eproshop.vn/file/uRGFtOHyz",
                 },
                 {
                     title: "Cỗ Tết thời công nghệ, chị em hiện đại nhàn tênh",
