@@ -170,7 +170,17 @@ export default {
                 // Submit form data
                 alert("Thông tin đã được gửi thành công");
                 // Here you can handle form submission like sending data to a server
-                console.log("Form data: ", this.form);
+                localStorage.setItem("bookingForm", JSON.stringify(this.form));
+
+                this.form = {
+                    name: "",
+                    phone: "",
+                    address: "",
+                    guests: "",
+                    date: "",
+                    eventType: "",
+                    fullService: false,
+                };
             }
         },
     },

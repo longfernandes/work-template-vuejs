@@ -37,7 +37,7 @@
                             :placeholder="'dd/mm'"
                             allow-clear="false"
                             bordered="false"
-                            class="!bg-transparent !text-white !border-0 border-b-2 border-white !text-center font-bold text-2xl w-[90px] px-0 h-[42px] flex items-center justify-center"
+                            class="!bg-transparent !text-white !border-0 border-b-2 border-white !text-center font-bold text-3xl w-[90px] px-0 h-[50px] flex items-center justify-center"
                             popup-class-name="!bg-white"
                         />
                         <div v-if="dateError" class="text-red-400 text-xl mt-1">
@@ -60,7 +60,7 @@
                                 type="number"
                                 min="1"
                                 max="100"
-                                class="text-white text-2xl font-bold text-center w-[90px] pr-6 bg-transparent border-0"
+                                class="text-white text-xl font-bold text-center w-[90px] pr-6 bg-transparent border-0"
                             />
                             <div
                                 class="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col justify-center h-full text-white"
@@ -95,13 +95,13 @@
                     <a-button
                         type="primary"
                         html-type="submit"
-                        class="bg-orange-600 hover:bg-orange-700 text-white flex items-center justify-center px-6 py-4 font-semibold rounded"
+                        class="bg-orange-600 hover:bg-orange-700 text-white flex items-center px-6 py-4 font-semibold rounded"
                     >
                         <p class="text-xl font-bold" @click="goToOder">ĐẶT TIỆC NGAY</p>
                     </a-button>
                     <a-button
                         type="default"
-                        class="bg-white text-orange-500 border-orange-500 flex items-center justify-center  px-6 py-4 hover:bg-orange-600 hover:text-white"
+                        class="bg-white text-orange-500 border-orange-500 flex items-center px-6 py-4 hover:bg-orange-600 hover:text-white"
                     >
                         <p class="text-xl font-bold" @click="goToMenu">XEM THỰC ĐƠN</p>
                     </a-button>
@@ -172,5 +172,7 @@ const decrementTables = () => {
 </script>
 
 <style scoped>
-/* Add custom styles if needed */
+:deep(.ant-picker-input input) {
+  color: white !important;
+}
 </style>
