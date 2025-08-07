@@ -2,8 +2,10 @@
     <div
         class="fixed inset-0 bg-white/30 backdrop-blur-sm z-50 flex items-center justify-center px-2"
     >
-        <div class="relative bg-white w-full max-w-6xl p-4 sm:p-6 rounded-lg shadow-lg overflow-y-auto max-h-[95vh]">
-            <!-- Đóng --> 
+        <div
+            class="relative bg-white w-full max-w-6xl p-4 sm:p-6 rounded-lg shadow-lg overflow-y-auto max-h-[95vh]"
+        >
+            <!-- Đóng -->
             <button
                 @click="onClose"
                 class="absolute -top-3 right-0 md:top-0 md:right-1 text-gray-500 hover:text-black text-3xl font-bold z-10"
@@ -12,7 +14,7 @@
             </button>
 
             <!-- Tên menu + loại -->
-            <div class="mb-4 flex flex-col sm:flex-row  gap-4 items-stretch">
+            <div class="mb-4 flex flex-col sm:flex-row gap-4 items-stretch">
                 <input
                     v-model="menuName"
                     type="text"
@@ -21,7 +23,7 @@
                 />
                 <select
                     v-model="menuType"
-                    class="border-3 font-bold text-lg border-orange-500 px-6 py-2 rounded"
+                    class="border-2 font-bold text-lg border-orange-500 px-6 py-2 rounded"
                 >
                     <option value="cá nhân">Cá nhân</option>
                     <option value="gia đình">Gia đình</option>
@@ -35,15 +37,16 @@
                     class="border-2 border-orange-500 p-4 rounded overflow-y-auto h-96"
                 >
                     <h3 class="text-lg font-bold mb-2">Tất cả món ăn</h3>
-                    <div class="grid grid-cols-3 sm:grid-cols-4 gap-3">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                         <div
                             v-for="item in allItems"
                             :key="item.id"
-                            class="border-2 border-orange-500 font-semibold p-2 rounded relative group hover:bg-gray-100 cursor-pointer"
+                            class="border-2 border-orange-500 font-semibold p-2 rounded relative hover:bg-gray-100 cursor-pointer"
                         >
+                            <!-- Nút + luôn hiển thị -->
                             <button
                                 @click="selectItem(item)"
-                                class="absolute top-1 right-1 bg-green-500 text-white rounded-full w-5 h-5 text-xs hidden group-hover:flex items-center justify-center cursor-pointer"
+                                class="absolute top-1 right-1 bg-green-500 text-white rounded-full w-6 h-6 text-sm flex items-center justify-center cursor-pointer"
                             >
                                 +
                             </button>
@@ -59,20 +62,21 @@
                     </div>
                 </div>
 
-                <!-- Đã chọn -->
+                <!-- Món đã chọn -->
                 <div
                     class="border-2 border-orange-500 p-4 rounded overflow-y-auto h-96"
                 >
                     <h3 class="text-lg font-bold mb-2">Món đã chọn</h3>
-                    <div class="grid grid-cols-3 sm:grid-cols-4 gap-2">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                         <div
                             v-for="item in selectedItems"
                             :key="item.id"
-                            class="border-2 border-orange-500 p-2 rounded relative group"
+                            class="border-2 border-orange-500 p-2 rounded relative"
                         >
+                            <!-- Nút - luôn hiển thị -->
                             <button
                                 @click="removeItem(item)"
-                                class="absolute top-1 right-1 bg-red-500 text-white rounded-full w-5 h-5 text-XS hidden group-hover:flex items-center justify-center cursor-pointer"
+                                class="absolute top-1 right-1 bg-red-500 text-white rounded-full w-6 h-6 text-sm flex items-center justify-center cursor-pointer"
                             >
                                 −
                             </button>
@@ -156,8 +160,13 @@ function handleSave() {
     const savedMenus = JSON.parse(localStorage.getItem("menus") || "[]");
     localStorage.setItem("menus", JSON.stringify([...savedMenus, newMenu]));
 
-    props.onSave();
-
-    if (props.onClose) props.onClose();
+    props.onSave?.();
+    props.onClose?.();
 }
 </script>
+
+<style scoped>
+button {
+    touch-action: manipulation;
+}
+</style>
