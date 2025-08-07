@@ -1,7 +1,7 @@
 <template>
-    <div class="flex justify-center items-center bg-gray-100 px-4 py-6">
+    <div class="flex justify-center items-center bg-gray-100  px-4 py-6">
         <!-- Container chứa Sidebar và Form content -->
-        <div class="flex flex-col md:flex-row w-full max-w-8xl bg-gray-300 gap-6 md:gap-10 px-4 md:px-10 py-6 md:py-16 rounded-lg">
+        <div class="flex flex-col md:flex-row w-full max-w-[1800px] mx-auto bg-gray-300 gap-6 md:gap-10 px-4 md:px-10 py-6 md:py-16 rounded-lg">
             <!-- Sidebar Container -->
             <div
                 class="w-full md:w-1/4 bg-white shadow-md rounded-lg p-6 flex flex-col justify-between"
