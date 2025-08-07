@@ -1,21 +1,21 @@
 <template>
-    <div class="w-full py-16 px-5 md:mb-10 max-w-[1800px] mx-auto">
+    <div class="w-full py-10 px-4 md:py-16 md:px-5 md:mb-5 max-w-[1800px] mx-auto">
         <div class="flex flex-col md:flex-row items-start gap-8">
             <div class="w-full md:w-1/3 space-y-6">
-                <h2 class="text-4xl font-bold leading-snug">
+                <h2 class="text-3xl md:text-4xl font-bold leading-snug">
                     SỰ LỰA CHỌN ẨM <br />
                     THỰC SỐ 1
                 </h2>
                 <button
                     @click="handleViewGallery"
-                    class="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 px-4 rounded"
+                    class="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-4 rounded text-sm sm:text-base"
                 >
                     XEM HÌNH ẢNH TIỆC
                 </button>
             </div>
 
-            <div class="w-full md:w-2/3 md:space-y-8 lg:space-y-9 h-290">
-                <div class="aspect-w-16 aspect-h-14 bg-black md:h-80 lg:h-200">
+            <div class="w-full md:w-2/3 space-y-6 ">
+                <div class="w-full h-[220px] sm:h-[300px] md:h-[400px] bg-black overflow-hidden rounded">
                     <iframe
                         class="w-full h-full"
                         :src="youtubeUrl"
@@ -24,7 +24,7 @@
                     ></iframe>
                 </div>
                 <div
-                    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-20 text-justify"
+                    class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 text-justify text-sm sm:text-base"
                 >
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.

@@ -1,21 +1,25 @@
 <template>
-    <div class="flex justify-center items-center bg-gray-100">
+    <div class="flex justify-center items-center bg-gray-100 px-4 py-6">
         <!-- Container chứa Sidebar và Form content -->
-        <div class="flex w-full max-w-8xl bg-gray-300 py-16 px-20 gap-10">
+        <div
+            class="flex flex-col md:flex-row w-full max-w-8xl bg-gray-300 gap-6 md:gap-10 px-4 md:px-10 py-6 md:py-16 rounded-lg"
+        >
             <!-- Sidebar Container -->
             <div
-                class="w-1/4 bg-white shadow-md rounded-lg p-8 flex flex-col justify-between"
+                class="w-full md:w-1/4 bg-white shadow-md rounded-lg p-6 flex flex-col justify-between"
             >
                 <div class="flex flex-col items-center">
                     <div
-                        class="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center text-5xl mb-4"
+                        class="w-24 h-24 md:w-32 md:h-32 bg-gray-200 rounded-full flex items-center justify-center text-4xl md:text-5xl mb-4"
                     >
                         👤
                     </div>
-                    <p class="font-bold text-lg">{{ userName }}</p>
+                    <p class="font-bold text-lg text-center break-words">
+                        {{ userName }}
+                    </p>
                     <!-- Hiển thị tên người dùng -->
                 </div>
-                <ul class="mt-6 space-y-4 text-lg text-gray-700">
+                <ul class="mt-6 space-y-3 text-base text-gray-700">
                     <li>
                         <router-link
                             to="/profile"
@@ -61,7 +65,7 @@
 
             <!-- Main Content -->
             <div
-                class="w-3/4 mx-auto bg-white p-6 rounded-lg shadow-lg"
+                class="w-full md:w-3/4 mx-auto bg-white p-6 rounded-lg shadow-lg"
             >
                 <h3 class="font-bold text-lg mb-4">Danh sách địa chỉ</h3>
 
@@ -74,44 +78,51 @@
                 </button>
 
                 <!-- Address List -->
-                <table class="w-full border-collapse">
-                    <thead>
-                        <tr>
-                            <th class="border px-4 py-2">Loại địa chỉ</th>
-                            <th class="border px-4 py-2">Địa chỉ</th>
-                            <th class="border px-4 py-2">Số điện thoại</th>
-                            <th class="border px-4 py-2">Chỉnh sửa</th>
-                            <th class="border px-4 py-2">Xóa</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="(address, index) in addresses" :key="index">
-                            <td class="border px-4 py-2">{{ address.type }}</td>
-                            <td class="border px-4 py-2">
-                                {{ address.address }}
-                            </td>
-                            <td class="border px-4 py-2">
-                                {{ address.phone }}
-                            </td>
-                            <td class="border px-4 py-2">
-                                <button
-                                    class="text-blue-500"
-                                    @click="handleEdit(index)"
-                                >
-                                    Sửa
-                                </button>
-                            </td>
-                            <td class="border px-4 py-2">
-                                <button
-                                    class="text-red-500"
-                                    @click="handleDelete(index)"
-                                >
-                                    Xóa
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse min-w-[600px]">
+                        <thead>
+                            <tr>
+                                <th class="border px-4 py-2">Loại địa chỉ</th>
+                                <th class="border px-4 py-2">Địa chỉ</th>
+                                <th class="border px-4 py-2">Số điện thoại</th>
+                                <th class="border px-4 py-2">Chỉnh sửa</th>
+                                <th class="border px-4 py-2">Xóa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr
+                                v-for="(address, index) in addresses"
+                                :key="index"
+                            >
+                                <td class="border px-4 py-2">
+                                    {{ address.type }}
+                                </td>
+                                <td class="border px-4 py-2">
+                                    {{ address.address }}
+                                </td>
+                                <td class="border px-4 py-2">
+                                    {{ address.phone }}
+                                </td>
+                                <td class="border px-4 py-2">
+                                    <button
+                                        class="text-blue-500"
+                                        @click="handleEdit(index)"
+                                    >
+                                        Sửa
+                                    </button>
+                                </td>
+                                <td class="border px-4 py-2">
+                                    <button
+                                        class="text-red-500"
+                                        @click="handleDelete(index)"
+                                    >
+                                        Xóa
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
@@ -121,7 +132,7 @@
             class="fixed inset-0 bg-white-500 bg-opacity-50 flex justify-center items-center z-50 overflow-y-auto"
         >
             <div
-                class="bg-white rounded-lg p-8 w-200 max-h-screen overflow-y-auto"
+                class="bg-white rounded-lg p-6 md:p-8 w-full max-w-2xl max-h-screen overflow-y-auto mx-4"
             >
                 <h2 class="font-bold text-lg mb-4">Thêm/Sửa địa chỉ</h2>
                 <form @submit.prevent="handleSubmit">

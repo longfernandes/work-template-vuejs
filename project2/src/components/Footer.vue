@@ -14,16 +14,16 @@
                 class="flex flex-col md:flex-row flex-wrap justify-between gap-8"
             >
                 <!-- Về chúng tôi -->
-                <div class="flex-1 text-ms">
+                <div class="w-full md:flex-1 text-ms">
                     <h3 class="font-semibold text-2xl mb-3">Về chúng tôi</h3>
-                    <p class="mb-3 text-lg">Số điện thoại: 095.366.4722</p>
+                    <p class="mb-3 text-lg">Số điện thoại: 099.8989.7777</p>
                     <p class="mb-3 text-lg">
-                        Địa chỉ: số 33 Nhân Chính, Trung Hoà, Cầu Giấy, Hà Nội
+                        Địa chỉ: số 77 Nhân Chính, Trung Hoà, Cầu Giấy, Hà Nội
                     </p>
                 </div>
 
                 <!-- Phương thức thanh toán -->
-                <div class="flex-1">
+                <div class="w-full md:flex-1 text-sm">
                     <h3 class="font-semibold text-2xl mb-5">
                         Phương thức thanh toán
                     </h3>
@@ -33,7 +33,7 @@
                             :key="'top-' + idx"
                             :src="'https://vudigital.co/wp-content/uploads/2022/12/logo-mastercard-da-thay-doi-nhu-the-nao-trong-hon-50-nam-2.webp'"
                             alt="MasterCard"
-                            class="w-12 sm:w-5 md:w-8 lg:w-10 xl:w-20 h-auto transition-transform duration-200 hover:scale-105"
+                            class="w-10 sm:w-12 md:w-14 h-auto transition-transform duration-200 hover:scale-105"
                         />
                     </div>
                     <!-- Hàng dưới: 3 ảnh -->
@@ -43,13 +43,13 @@
                             :key="'bottom-' + idx"
                             :src="'https://vudigital.co/wp-content/uploads/2022/12/logo-mastercard-da-thay-doi-nhu-the-nao-trong-hon-50-nam-2.webp'"
                             alt="MasterCard"
-                            class="w-12 sm:w-5 md:w-8 lg:w-10 xl:w-20 transition-transform duration-200 hover:scale-105"
+                            class="w-10 sm:w-12 md:w-14 transition-transform duration-200 hover:scale-105"
                         />
                     </div>
                 </div>
 
                 <!-- Truyền thông xã hội -->
-                <div class="flex-1">
+                <div class="w-full md:flex-1 text-sm">
                     <h3 class="font-semibold text-2xl mb-3">
                         Truyền thông xã hội
                     </h3>
@@ -78,18 +78,18 @@
                 </div>
 
                 <!-- Hỗ trợ khách hàng -->
-                <div class="flex-1">
+                <div class="w-full md:flex-1 text-sm">
                     <h3 class="font-semibold text-2xl mb-2">
                         Hỗ trợ khách hàng
                     </h3>
                     <p class="text-lg mb-3">
-                        <strong>Liên hệ:</strong> Hotline: 036.555.1123
+                        <strong>Liên hệ:</strong> Hotline: 099.8989.7777
                     </p>
                     <p class="text-lg ml-[70px] mb-3">
-                        Email: happy.@gmail.com
+                        Email: vanlong17@gmail.com
                     </p>
                     <p class="text-lg">
-                        <strong>Địa chỉ:</strong> Số 33 Nhân Chính, Trung Hòa,
+                        <strong>Địa chỉ:</strong> Số 77 Nhân Chính, Trung Hòa,
                         Cầu Giấy, Hà Nội
                     </p>
                 </div>
@@ -101,14 +101,14 @@
 
         <!-- Bottom line -->
         <div
-            class="flex flex-col md:flex-row items-start md:items-center justify-between max-w-[1800px] px-5 mx-auto text-xs gap-4"
+            class="flex flex-col md:flex-row items-start md:items-center justify-between max-w-[1800px] px-5 mx-auto text-xs gap-4 mt-6"
         >
             <div>
-                <p class="text-white text-2xl mb-5">Công ty TNHH Minh Trí</p>
+                <p class="text-white text-2xl mb-5">Công ty TNHH Van Long</p>
                 <p class="text-white text-xl">số CND/DN/ cấp ngày 2/1/2020</p>
             </div>
 
-            <div class="w-1/5 text-left self-start">
+            <div class=" w-full md:w-1/5 text-right self-start">
                 <div class="flex flex-col items-start mb-7">
                     <img
                         src="https://zaria.vn/wp-content/uploads/2021/04/bo-cong-thuong.png"
@@ -116,7 +116,7 @@
                         class="w-[120px] md:w-[140px] lg:w-[160px] self-start h-auto"
                     />
                     <span
-                        class="text-lg md:text-base lg:text-lg ml-[15px] -mt-10"
+                        class="text-lg md:text-base lg:text-lg ml-[10px] -mt-10"
                         >© Thông báo</span
                     >
                 </div>

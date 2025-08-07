@@ -1,21 +1,21 @@
 <template>
-    <div class="flex justify-center items-center bg-gray-100">
+    <div class="flex justify-center items-center bg-gray-100 px-4 py-6">
         <!-- Container chứa Sidebar và Form content -->
-        <div class="flex w-full max-w-8xl bg-gray-300 py-16 px-20 gap-10">
+        <div class="flex flex-col md:flex-row w-full max-w-8xl bg-gray-300 gap-6 md:gap-10 px-4 md:px-10 py-6 md:py-16 rounded-lg">
             <!-- Sidebar Container -->
             <div
-                class="w-1/4 bg-white shadow-md rounded-lg p-8 flex flex-col justify-between"
+                class="w-full md:w-1/4 bg-white shadow-md rounded-lg p-6 flex flex-col justify-between"
             >
                 <div class="flex flex-col items-center">
                     <div
-                        class="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center text-5xl mb-4"
+                        class="w-24 h-24 md:w-32 md:h-32 bg-gray-200 rounded-full flex items-center justify-center text-4xl md:text-5xl mb-4"
                     >
                         👤
                     </div>
-                    <p class="font-bold text-lg">{{ userName }}</p>
+                    <p class="font-bold text-lg text-center break-words">{{ userName }}</p>
                     <!-- Hiển thị tên người dùng -->
                 </div>
-                <ul class="mt-6 space-y-4 text-lg text-gray-700">
+                <ul class="mt-6 space-y-3 text-base text-gray-700">
                     <li>
                         <router-link
                             to="/profile"
@@ -61,12 +61,12 @@
 
             <!-- Form Content Container -->
             <div
-                class="w-3/4 mx-auto bg-white p-6 rounded-lg shadow-lg"
+                class="w-full md:w-3/4 mx-auto bg-white p-6 rounded-lg shadow-lg"
             >
                 <form class="space-y-6" @submit.prevent="handleSubmit">
-                    <div class="grid grid-cols-2 gap-5">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div>
-                            <label class="block font-bold mb-4">Họ tên:</label>
+                            <label class="block font-bold mb-2">Họ tên:</label>
                             <input
                                 type="text"
                                 v-model="form.fullName"
@@ -75,7 +75,7 @@
                             />
                         </div>
                         <div>
-                            <label class="block font-bold mb-4"
+                            <label class="block font-bold mb-2"
                                 >Giới tính:</label
                             >
                             <select
@@ -89,7 +89,7 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block font-bold mb-4"
+                            <label class="block font-bold mb-2"
                                 >Số điện thoại:</label
                             >
                             <input
@@ -99,14 +99,14 @@
                                 class="w-full border rounded px-4 py-3"
                             />
                         </div>
-                        <div class="grid grid-cols-3 gap-4">
+                        <div class="grid grid-cols-3 gap-2">
                             <div>
-                                <label class="block font-bold mb-4"
+                                <label class="block font-bold mb-2"
                                     >Ngày sinh:</label
                                 >
                                 <select
                                     v-model="form.day"
-                                    class="w-full border rounded px-4 py-3"
+                                    class="w-full border rounded px-2 py-2"
                                 >
                                     <option>Ngày</option>
                                     <option v-for="n in 31" :key="n" :value="n">
@@ -115,12 +115,12 @@
                                 </select>
                             </div>
                             <div>
-                                <label class="block font-bold mb-4 invisible"
+                                <label class="block font-bold mb-2"
                                     >Tháng</label
                                 >
                                 <select
                                     v-model="form.month"
-                                    class="w-full border rounded px-4 py-3"
+                                    class="w-full border rounded px-2 py-2"
                                 >
                                     <option>Tháng</option>
                                     <option v-for="n in 12" :key="n" :value="n">
@@ -129,12 +129,12 @@
                                 </select>
                             </div>
                             <div>
-                                <label class="block font-bold mb-4 invisible"
+                                <label class="block font-bold mb-2"
                                     >Năm</label
                                 >
                                 <select
                                     v-model="form.year"
-                                    class="w-full border rounded px-4 py-3"
+                                    class="w-full border rounded px-2 py-2"
                                 >
                                     <option>Năm</option>
                                     <option
@@ -147,7 +147,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-span-2">
+                        <div class="md:col-span-2">
                             <label class="block font-bold mb-4">Email:</label>
                             <input
                                 type="email"

@@ -3,18 +3,18 @@
         class="relative bg-cover bg-center text-white"
         :style="{ backgroundImage: `url('${bannerUrl}')` }"
     >
-        <div class="relative py-20 px-5 w-full h-full">
+        <div class="relative py-16 sm:py-20 px4 sm:px-5 w-full h-full">
             <div class="absolute inset-0 bg-black opacity-60 z-0"></div>
             <form
                 @submit.prevent="onSubmit"
                 class="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 max-w-[1800px] mx-auto"
             >
                 <!-- Intro -->
-                <div class="md:w-1/3 text-left">
-                    <h2 class="text-4xl font-bold mb-2 text-white">
+                <div class="md:w-1/3 w-full text-center md:text-left">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-white">
                         ĐẶT TIỆC Ở ĐÂY
                     </h2>
-                    <p class="text-xl leading-relaxed text-white">
+                    <p class="text-base sm:text-lg md:text-xl px-2 sm:px-0 lg:px-0  leading-relaxed text-white">
                         Đặt tiệc ngay hôm nay để những sự kiện quan trọng của
                         bạn trở nên đơn giản và dễ dàng hơn bao giờ hết
                     </p>
@@ -22,7 +22,7 @@
 
                 <!-- Inputs -->
                 <div
-                    class="md:w-1/3 w-full flex flex-col sm:flex-row items-center justify-center gap-6"
+                    class="md:w-1/3 w-full flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
                 >
                     <!-- Ngày -->
                     <div
@@ -60,7 +60,7 @@
                                 type="number"
                                 min="1"
                                 max="100"
-                                class="text-white text-2xl font-bold text-center w-[70px] pr-6 bg-transparent border-0"
+                                class="text-white text-2xl font-bold text-center w-[90px] pr-6 bg-transparent border-0"
                             />
                             <div
                                 class="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col justify-center h-full text-white"
@@ -91,17 +91,17 @@
                 </div>
 
                 <!-- Buttons -->
-                <div class="md:w-1/3 flex flex-col items-end gap-3">
+                <div class="md:w-1/3 flex flex-col items-center md:items-end gap-3 mt-4 md:mt-0">
                     <a-button
                         type="primary"
                         html-type="submit"
-                        class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 font-semibold rounded"
+                        class="bg-orange-600 hover:bg-orange-700 text-white flex items-center justify-center px-6 py-4 font-semibold rounded"
                     >
                         <p class="text-xl font-bold" @click="goToOder">ĐẶT TIỆC NGAY</p>
                     </a-button>
                     <a-button
                         type="default"
-                        class="bg-white text-orange-500 border-orange-500 hover:bg-orange-600 hover:text-white"
+                        class="bg-white text-orange-500 border-orange-500 flex items-center justify-center  px-6 py-4 hover:bg-orange-600 hover:text-white"
                     >
                         <p class="text-xl font-bold" @click="goToMenu">XEM THỰC ĐƠN</p>
                     </a-button>

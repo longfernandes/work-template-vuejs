@@ -2,17 +2,17 @@
     <div class="w-full flex justify-center items-center bg-gray-100 px-5 py-9">
         <div class="max-w-[1800px] mx-auto">
             <div
-                class="flex flex-col md:flex-row gap-12 justify-center items-center"
+                class="w-full flex flex-col md:flex-row gap-12 justify-center items-center"
             >
                 <!-- Left Section -->
                 <div
                     :class="{ 'w-full': !isModalOpen, 'md:w-1/2': isModalOpen }"
                     class="text-left"
                 >
-                    <h2 class="text-5xl font-bold text-gray-900 mb-5">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
                         Tiệc tại gia chất nhà hàng
                     </h2>
-                    <p class="text-gray-700 leading-relaxed text-2xl mb-5">
+                    <p class="text-gray-900 leading-relaxed text-base sm:text-lg lg:text-2xl mb-5">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Eum quae fugit accusantium commodi esse modi pariatur
                         praesentium, voluptas dolor ea qui? Vel dolore ipsam
@@ -22,7 +22,7 @@
                         praesentium, voluptas dolor ea qui? Vel dolore ipsam
                         vitae voluptatem esse repellat nobis sint.
                     </p>
-                    <p class="text-gray-700 leading-relaxed text-2xl">
+                    <p class="text-gray-900 leading-relaxed text-base sm:text-lg lg:text-2xl">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Eum quae fugit accusantium commodi esse modi pariatur
                         praesentium, voluptas dolor ea qui? Vel dolore ipsam
@@ -31,7 +31,7 @@
                 </div>
 
                 <!-- Right Section (Video thumbnail) -->
-                <div class="relative w-full md:w-1/2" @click="openVideo">
+                <div class="relative w-full md:w-1/2 aspect-video" @click="openVideo">
                     <div
                         class="relative px-10 py-10 rounded-lg overflow-hidden cursor-pointer"
                     >
@@ -76,7 +76,7 @@
                         allowfullscreen
                     ></iframe>
                     <button
-                        class="absolute -top-4 -right-4 text-white text-xl bg-black bg-opacity-60 rounded-full p-2 hover:bg-opacity-20 transition"
+                        class="absolute -top-3 -right-3 text-white text-lg sm:text-xl bg-black bg-opacity-60 rounded-full p-2 hover:bg-opacity-20 transition"
                         @click="closeVideo"
                     >
                         <CloseOutlined />
